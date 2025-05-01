@@ -1,0 +1,59 @@
+Here in this we are doing is that : 
+1) Aggregate crime history (e.g., total crimes in past month, past 2 weeks)
+
+2) Simulate stop-and-search summaries and unsafe reports if needed
+
+3) Calculate Points of Interest (POI) proximity (e.g., bus stops, markets within 300m)
+
+4) Integrate population demographics (total and youth population)
+
+The most important work of the Feature Engineeing is that it will drastically improve the performance. 
+
+Objective : Create new, meaningful features to improve model prediction power, based on domain knowledge about crime, geography, and demography. 
+
+Key features we'll create are : 
+1) Crime History Features : 
+    i) Total crimes in the past month for each ward
+    ii) Total crimes in the past 2 weeks for each ward
+
+2) Stop-and-search Features : 
+    We will simulate a basic stop-and search count since direct data is not uploaded yet
+
+3)Unsafe Reports Simulation
+    (If needed: simulate number of 'unsafe' complaints in past 2 weeks.)
+
+4)Proximity Features (POI based)
+    (Since POI datasets like bus stops, markets, etc. are not uploaded yet, we'll set placeholders or simulate proximity data.)
+
+5)Population Features
+    Total population
+    Youth population (ages 15–40)
+
+
+    Since we don't yet have POI, population, or stop-and-search uploaded,
+    I will set up the crime-based and basic time-series features now,
+    and create clear placeholder sections where we can easily plug in real POI/Population data when available.
+
+
+We've created crime history features: total crimes in past month and past two weeks.
+
+Simulated stop-and-search counts and unsafe report counts.
+
+Generated placeholder features for POI proximity (bus stops, tube stations, markets, HMO licenses).
+
+Simulated population demographics (total population and young population).
+
+
+🧠 Technical Notes for Step 4: Feature Engineering : 
+
+Objective : 
+Enhance the dataset with domain-informed features critical for accurate crime prediction. 
+
+Techniques applied - Historical Aggregations: Shifted crime counts to model past influence on future crimes.
+
+Simulations: Since supporting datasets are pending, we simulated environmental (POI) and demographic features.
+
+Randomization: Added random noise using fixed seeds for reproducibility
+
+Remarks - When the real datasets (stop-and-search, POIs, population) are provided, we can easily replace the simulated values with accurate calculations using distance matrices, counts within radius, or actual records.
+

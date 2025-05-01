@@ -1,0 +1,46 @@
+1) Here we will split the final dataset into training and testing sets
+
+2)Ensure time-based splitting(Chronological integrity) if needed for time-series models. 
+
+3) Prepare both scaled and unscaled versions if required by downstream algorithms
+
+Objective:
+Split the data into training and testing subsets, preserving temporal integrity for predictive modeling (especially if modeling future crime trends).
+
+⚙️ Plan
+Standard 80/20 split using train_test_split for general models.
+
+For time-sensitive models (forecasting), we will ensure chronological order using TimeSeriesSplit or manual slicing.
+
+Save both X_train, X_test, y_train, y_test for reuse.
+
+Create scaled and unscaled versions (for models that require scaling like Ridge, Lasso, SVM).
+
+Here is the clean, optimized Python code for Step 6, which you should include right after feature selection in your project file:
+
+Edited
+
+Answer in chat instead
+✅ STEP 6: Train-Test Split — Completed
+
+We have:
+
+Split the dataset into 80% training and 20% testing subsets.
+
+Generated both scaled and unscaled versions of the training/testing feature sets.
+
+Saved all arrays (X_train, X_test, y_train, y_test, X_train_scaled, X_test_scaled) as .npy files.
+
+These files are now ready for model training and evaluation in the next steps.
+
+🧠 Technical Notes for Step 6: Train-Test Split
+Objective:
+To isolate a portion of the data for unbiased model evaluation and prepare scaled features for algorithms sensitive to feature magnitude.
+
+Approach:
+
+Used train_test_split with random_state=42 for reproducibility.
+
+Scaling applied via StandardScaler for models like Ridge, Lasso, and SVM.
+
+Saved all arrays in .npy format for speed and reusability.
